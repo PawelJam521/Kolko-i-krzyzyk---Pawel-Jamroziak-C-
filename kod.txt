@@ -1,0 +1,474 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp4
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        bool brakWygranej = true;
+        int klikniec = 0;
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            if (klikniec % 2 == 0 && button1.Text != "X" && brakWygranej == true && button1.Text != "O")
+            {
+                button1.Text = "O";
+                label1.Text = "Kolej gracza X";
+                klikniec++;
+            }
+            if (klikniec % 2 == 1 && button1.Text != "O" && brakWygranej == true && button1.Text != "X")
+            {
+                button1.Text = "X";
+                label1.Text = "Kolej gracza O";
+                klikniec++;
+            }
+
+            if (button1.Text == "X" && button2.Text == "X" && button3.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+            if (button1.Text == "X" && button5.Text == "X" && button9.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+            if (button1.Text == "X" && button4.Text == "X" && button7.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+
+            if (button1.Text == "O" && button2.Text == "O" && button3.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button1.Text == "O" && button5.Text == "O" && button9.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button1.Text == "O" && button4.Text == "O" && button7.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button1.Text != "" && button2.Text != "" && button3.Text != "" && button4.Text != "" && button5.Text != "" && button6.Text != "" && button7.Text != "" && button8.Text != "" && button9.Text != "" && brakWygranej == true)
+            {
+                brakWygranej = true;
+                label1.Text = "Nikt nie wygra³,jest remis!";
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (klikniec % 2 == 0 && button2.Text != "X" && brakWygranej == true && button2.Text != "O")
+            {
+                button2.Text = "O";
+                label1.Text = "Kolej gracza X";
+                klikniec++;
+            }
+            if (klikniec % 2 == 1 && button2.Text != "O" && brakWygranej == true && button2.Text != "X")
+            {
+                button2.Text = "X";
+                label1.Text = "Kolej gracza O";
+                klikniec++;
+            }
+
+            if (button1.Text == "X" && button2.Text == "X" && button3.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+            if (button2.Text == "X" && button5.Text == "X" && button8.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+
+            if (button1.Text == "O" && button2.Text == "O" && button3.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button2.Text == "O" && button5.Text == "O" && button8.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button1.Text != "" && button2.Text != "" && button3.Text != "" && button4.Text != "" && button5.Text != "" && button6.Text != "" && button7.Text != "" && button8.Text != "" && button9.Text != "" && brakWygranej == true)
+            {
+                brakWygranej = true;
+                label1.Text = "Nikt nie wygra³,jest remis!";
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (klikniec % 2 == 0 && button3.Text != "X" && brakWygranej == true && button3.Text != "O")
+            {
+                button3.Text = "O";
+                label1.Text = "Kolej gracza X";
+                klikniec++;
+            }
+            if (klikniec % 2 == 1 && button3.Text != "O" && brakWygranej == true && button3.Text != "X")
+            {
+                button3.Text = "X";
+                label1.Text = "Kolej gracza O";
+                klikniec++;
+            }
+
+            if (button1.Text == "X" && button2.Text == "X" && button3.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+            if (button3.Text == "X" && button6.Text == "X" && button9.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+
+            if (button1.Text == "O" && button2.Text == "O" && button3.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button3.Text == "O" && button6.Text == "O" && button9.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button1.Text != "" && button2.Text != "" && button3.Text != "" && button4.Text != "" && button5.Text != "" && button6.Text != "" && button7.Text != "" && button8.Text != "" && button9.Text != "" && brakWygranej == true)
+            {
+                brakWygranej = true;
+                label1.Text = "Nikt nie wygra³,jest remis!";
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (klikniec % 2 == 0 && button4.Text != "O" && brakWygranej == true && button4.Text != "O")
+            {
+                button4.Text = "O";
+                label1.Text = "Kolej gracza X";
+                klikniec++;
+            }
+            if (klikniec % 2 == 1 && button4.Text != "O" && brakWygranej == true && button4.Text != "X")
+            {
+                button4.Text = "X";
+                label1.Text = "Kolej gracza O";
+                klikniec++;
+            }
+
+            if (button1.Text == "X" && button4.Text == "X" && button7.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+            if (button4.Text == "X" && button5.Text == "X" && button6.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+
+            if (button1.Text == "O" && button4.Text == "O" && button7.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button4.Text == "O" && button5.Text == "O" && button6.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button1.Text != "" && button2.Text != "" && button3.Text != "" && button4.Text != "" && button5.Text != "" && button6.Text != "" && button7.Text != "" && button8.Text != "" && button9.Text != "" && brakWygranej == true)
+            {
+                brakWygranej = true;
+                label1.Text = "Nikt nie wygra³,jest remis!";
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (klikniec % 2 == 0 && button5.Text != "X" && brakWygranej == true && button5.Text != "O")
+            {
+                button5.Text = "O";
+                label1.Text = "Kolej gracza X";
+                klikniec++;
+            }
+            if (klikniec % 2 == 1 && button5.Text != "O" && brakWygranej == true && button5.Text != "X")
+            {
+                button5.Text = "X";
+                label1.Text = "Kolej gracza O";
+                klikniec++;
+            }
+
+            if (button1.Text == "X" && button5.Text == "X" && button9.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+            if (button2.Text == "X" && button5.Text == "X" && button8.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+            if (button4.Text == "X" && button5.Text == "X" && button6.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+            if (button3.Text == "X" && button5.Text == "X" && button7.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+
+            if (button1.Text == "O" && button5.Text == "O" && button9.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button2.Text == "O" && button5.Text == "O" && button8.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button4.Text == "O" && button5.Text == "O" && button6.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button3.Text == "O" && button5.Text == "O" && button7.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button1.Text != "" && button2.Text != "" && button3.Text != "" && button4.Text != "" && button5.Text != "" && button6.Text != "" && button7.Text != "" && button8.Text != "" && button9.Text != "" && brakWygranej == true)
+            {
+                brakWygranej = true;
+                label1.Text = "Nikt nie wygra³,jest remis!";
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (klikniec % 2 == 0 && button6.Text != "X" && brakWygranej == true && button6.Text != "O")
+            {
+                button6.Text = "O";
+                label1.Text = "Kolej gracza X";
+                klikniec++;
+            }
+            if (klikniec % 2 == 1 && button6.Text != "O" && brakWygranej == true && button6.Text != "X")
+            {
+                button6.Text = "X";
+                label1.Text = "Kolej gracza O";
+                klikniec++;
+            }
+
+            if (button4.Text == "X" && button5.Text == "X" && button6.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+            if (button3.Text == "X" && button6.Text == "X" && button9.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+
+            if (button4.Text == "O" && button5.Text == "O" && button6.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button3.Text == "O" && button6.Text == "O" && button9.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button1.Text != "" && button2.Text != "" && button3.Text != "" && button4.Text != "" && button5.Text != "" && button6.Text != "" && button7.Text != "" && button8.Text != "" && button9.Text != "" && brakWygranej == true)
+            {
+                brakWygranej = true;
+                label1.Text = "Nikt nie wygra³,jest remis!";
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (klikniec % 2 == 0 && button7.Text != "X" && brakWygranej == true && button7.Text != "O")
+            {
+                button7.Text = "O";
+                label1.Text = "Kolej gracza X";
+                klikniec++;
+            }
+            if (klikniec % 2 == 1 && button7.Text != "O" && brakWygranej == true && button7.Text != "X")
+            {
+                button7.Text = "X";
+                label1.Text = "Kolej gracza O";
+                klikniec++;
+            }
+
+            if (button1.Text == "X" && button4.Text == "X" && button7.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+            if (button3.Text == "X" && button5.Text == "X" && button7.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+            if (button7.Text == "X" && button8.Text == "X" && button9.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+
+            if (button1.Text == "O" && button4.Text == "O" && button7.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button3.Text == "O" && button5.Text == "O" && button7.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button7.Text == "O" && button8.Text == "O" && button9.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button1.Text != "" && button2.Text != "" && button3.Text != "" && button4.Text != "" && button5.Text != "" && button6.Text != "" && button7.Text != "" && button8.Text != "" && button9.Text != "" && brakWygranej == true)
+            {
+                brakWygranej = true;
+                label1.Text = "Nikt nie wygra³,jest remis!";
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (klikniec % 2 == 0 && button8.Text != "X" && brakWygranej == true && button8.Text != "O")
+            {
+                button8.Text = "O";
+                label1.Text = "Kolej gracza X";
+                klikniec++;
+            }
+            if (klikniec % 2 == 1 && button8.Text != "O" && brakWygranej == true && button8.Text != "X")
+            {
+                button8.Text = "X";
+                label1.Text = "Kolej gracza O";
+                klikniec++;
+            }
+
+            if (button7.Text == "X" && button8.Text == "X" && button9.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+            if (button2.Text == "X" && button5.Text == "X" && button8.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+
+            if (button7.Text == "O" && button8.Text == "O" && button9.Text == "O")
+            { 
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button2.Text == "O" && button5.Text == "O" && button8.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button1.Text != "" && button2.Text != "" && button3.Text != "" && button4.Text != "" && button5.Text != "" && button6.Text != "" && button7.Text != "" && button8.Text != "" && button9.Text != "" && brakWygranej == true)
+            {
+                brakWygranej = true;
+                label1.Text = "Nikt nie wygra³,jest remis!";
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (klikniec % 2 == 0 && button9.Text != "X" && brakWygranej == true && button9.Text != "O")
+            {
+                button9.Text = "O";
+                label1.Text = "Kolej gracza X";
+                klikniec++;
+            }
+            if (klikniec % 2 == 1 && button9.Text != "O" && brakWygranej == true && button9.Text != "X")
+            {
+                button9.Text = "X";
+                label1.Text = "Kolej gracza O";
+                klikniec++;
+            }
+
+            if (button1.Text == "X" && button5.Text == "X" && button9.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+            if (button3.Text == "X" && button6.Text == "X" && button9.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+            if (button7.Text == "X" && button8.Text == "X" && button9.Text == "X")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz X!!!";
+            }
+
+            if (button1.Text == "O" && button5.Text == "O" && button9.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button3.Text == "O" && button6.Text == "O" && button9.Text == "O")
+            {
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button7.Text == "O" && button8.Text == "O" && button9.Text == "O")
+            { 
+                brakWygranej = false;
+                label1.Text = "Wygra³ gracz O!!!";
+            }
+            if (button1.Text != "" && button2.Text != "" && button3.Text != "" && button4.Text != "" && button5.Text != "" && button6.Text != "" && button7.Text != "" && button8.Text != "" && button9.Text != "" && brakWygranej == true)
+            {
+                brakWygranej = true;
+                label1.Text = "Nikt nie wygra³,jest remis!";
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            brakWygranej = true;
+            label1.Text = "Kolej gracza O";
+            button1.Text = "";
+            button2.Text = "";
+            button3.Text = "";
+            button4.Text = "";
+            button5.Text = "";
+            button6.Text = "";
+            button7.Text = "";
+            button8.Text = "";
+            button9.Text = "";
+            klikniec = 0;
+        }
+    }
+}
